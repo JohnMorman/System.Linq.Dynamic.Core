@@ -51,7 +51,7 @@ namespace ConsoleAppEF2
             public int Id { get; set; }
         }
 
-        class TestCustomTypeProvider : DefaultDynamicLinqCustomTypeProvider, IDynamicLinkCustomTypeProvider
+        class TestCustomTypeProvider : DefaultDynamicLinqCustomTypeProvider, IDynamicLinqCustomTypeProvider
         {
             public new HashSet<Type> GetCustomTypes()
             {

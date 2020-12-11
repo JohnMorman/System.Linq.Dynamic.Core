@@ -12,13 +12,13 @@ namespace System.Linq.Dynamic.Core.Tests.Parser
     {
         private readonly ParsingConfig _parsingConfig = new ParsingConfig();
         private readonly Mock<IKeywordsHelper> _keywordsHelperMock;
-        private readonly Mock<IDynamicLinkCustomTypeProvider> _dynamicTypeProviderMock;
+        private readonly Mock<IDynamicLinqCustomTypeProvider> _dynamicTypeProviderMock;
 
         private readonly TypeFinder _sut;
 
         public TypeFinderTests()
         {
-            _dynamicTypeProviderMock = new Mock<IDynamicLinkCustomTypeProvider>();
+            _dynamicTypeProviderMock = new Mock<IDynamicLinqCustomTypeProvider>();
             _dynamicTypeProviderMock.Setup(dt => dt.ResolveType(typeof(BaseEmployee).FullName)).Returns(typeof(BaseEmployee));
             _dynamicTypeProviderMock.Setup(dt => dt.ResolveType(typeof(Boss).FullName)).Returns(typeof(Boss));
             _dynamicTypeProviderMock.Setup(dt => dt.ResolveType(typeof(Worker).FullName)).Returns(typeof(Worker));

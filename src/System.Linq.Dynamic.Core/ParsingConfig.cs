@@ -33,16 +33,16 @@ namespace System.Linq.Dynamic.Core
             RenameEmptyParameterExpressionNames = true
         };
 
-        private IDynamicLinkCustomTypeProvider _customTypeProvider;
+        private IDynamicLinqCustomTypeProvider _customTypeProvider;
 
         private IExpressionPromoter _expressionPromoter;
 
         private IQueryableAnalyzer _queryableAnalyzer;
 
         /// <summary>
-        /// Gets or sets the <see cref="IDynamicLinkCustomTypeProvider"/>.
+        /// Gets or sets the <see cref="IDynamicLinqCustomTypeProvider"/>.
         /// </summary>
-        public IDynamicLinkCustomTypeProvider CustomTypeProvider
+        public IDynamicLinqCustomTypeProvider CustomTypeProvider
         {
             get
             {

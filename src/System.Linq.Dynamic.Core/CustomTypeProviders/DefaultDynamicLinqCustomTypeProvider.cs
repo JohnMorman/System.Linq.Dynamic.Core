@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 namespace System.Linq.Dynamic.Core.CustomTypeProviders
 {
     /// <summary>
-    /// The default implementation for <see cref="IDynamicLinkCustomTypeProvider"/>.
+    /// The default implementation for <see cref="IDynamicLinqCustomTypeProvider"/>.
     /// 
     /// Scans the current AppDomain for all types marked with <see cref="DynamicLinqTypeAttribute"/>, and adds them as custom Dynamic Link types.
     ///
@@ -14,7 +14,7 @@ namespace System.Linq.Dynamic.Core.CustomTypeProviders
     ///
     /// This class is used as default for full .NET Framework, so not for .NET Core
     /// </summary>
-    public class DefaultDynamicLinqCustomTypeProvider : AbstractDynamicLinqCustomTypeProvider, IDynamicLinkCustomTypeProvider
+    public class DefaultDynamicLinqCustomTypeProvider : AbstractDynamicLinqCustomTypeProvider, IDynamicLinqCustomTypeProvider
     {
         private readonly IAssemblyHelper _assemblyHelper = new DefaultAssemblyHelper();
         private readonly bool _cacheCustomTypes;

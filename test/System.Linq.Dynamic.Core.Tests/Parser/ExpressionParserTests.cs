@@ -13,11 +13,11 @@ namespace System.Linq.Dynamic.Core.Tests.Parser
     public partial class ExpressionParserTests
     {
         private readonly ParsingConfig _parsingConfig;
-        private readonly Mock<IDynamicLinkCustomTypeProvider> _dynamicTypeProviderMock;
+        private readonly Mock<IDynamicLinqCustomTypeProvider> _dynamicTypeProviderMock;
 
         public ExpressionParserTests()
         {
-            _dynamicTypeProviderMock = new Mock<IDynamicLinkCustomTypeProvider>();
+            _dynamicTypeProviderMock = new Mock<IDynamicLinqCustomTypeProvider>();
             _dynamicTypeProviderMock.Setup(dt => dt.GetCustomTypes()).Returns(new HashSet<Type>() { typeof(Company), typeof(MainCompany) });
             _dynamicTypeProviderMock.Setup(dt => dt.ResolveType(typeof(Company).FullName)).Returns(typeof(Company));
             _dynamicTypeProviderMock.Setup(dt => dt.ResolveType(typeof(MainCompany).FullName)).Returns(typeof(MainCompany));

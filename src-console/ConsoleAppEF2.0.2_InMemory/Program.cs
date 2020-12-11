@@ -23,7 +23,7 @@ namespace ConsoleAppEF2
             }
         }
 
-        class C : AbstractDynamicLinqCustomTypeProvider, IDynamicLinkCustomTypeProvider
+        class C : AbstractDynamicLinqCustomTypeProvider, IDynamicLinqCustomTypeProvider
         {
             public HashSet<Type> GetCustomTypes()
             {

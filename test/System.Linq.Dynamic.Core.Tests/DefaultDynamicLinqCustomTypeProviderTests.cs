@@ -7,7 +7,7 @@ namespace System.Linq.Dynamic.Core.Tests
 {
     public class DefaultDynamicLinqCustomTypeProviderTests
     {
-        private readonly IDynamicLinkCustomTypeProvider _sut;
+        private readonly IDynamicLinqCustomTypeProvider _sut;
 
         public DefaultDynamicLinqCustomTypeProviderTests()
         {
